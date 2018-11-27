@@ -53,6 +53,7 @@
     <Compile Include="Classes\Evaluation.cs" />
     <Compile Include="Classes\Recipe.cs" />
     <Compile Include="Classes\TechnicalCourse.cs" />
+    <Compile Include="Connexion\Connexion.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Forms\CoursesForm.cs">
       <SubType>Form</SubType>
@@ -68,8 +69,12 @@
     <Compile Include="Forms\EvaluationForm.Designer.cs">
       <DependentUpon>EvaluationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ICourseView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CourseRepository.cs" />
+    <Compile Include="Repository\EvaluationRepository.cs" />
+    <Compile Include="Repository\RecipeRepository.cs" />
     <EmbeddedResource Include="Forms\CoursesForm.resx">
       <DependentUpon>CoursesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +90,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Yannick_CoursDeRecettes.Classes.Course.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,8 +105,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repository\" />
     <Folder Include="ViewInterfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

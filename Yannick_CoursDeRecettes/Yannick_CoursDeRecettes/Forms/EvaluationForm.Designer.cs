@@ -109,6 +109,7 @@
             this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "Annuler";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // EvaluationForm
             // 
@@ -124,6 +125,7 @@
             this.Controls.Add(this.utilityTextbox);
             this.Controls.Add(this.utilityLabelDescription);
             this.Name = "EvaluationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Évaluation du cours";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

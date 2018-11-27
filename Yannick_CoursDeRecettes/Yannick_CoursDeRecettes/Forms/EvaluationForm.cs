@@ -16,5 +16,10 @@ namespace Yannick_CoursDeRecettes
         {
             InitializeComponent();
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

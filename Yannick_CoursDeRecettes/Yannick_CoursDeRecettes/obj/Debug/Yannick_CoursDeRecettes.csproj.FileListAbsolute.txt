@@ -1,0 +1,15 @@
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\bin\Debug\Yannick_CoursDeRecettes.exe.config
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\bin\Debug\Yannick_CoursDeRecettes.exe
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\bin\Debug\Yannick_CoursDeRecettes.pdb
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\bin\Debug\MySql.Data.dll
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\bin\Debug\Google.Protobuf.dll
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\bin\Debug\MySql.Data.xml
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.CourseForm.resources
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.EvaluationForm.resources
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.Properties.Resources.resources
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.csproj.GenerateResource.cache
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.csproj.CoreCompileInputs.cache
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.csproj.CopyComplete
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.exe
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.pdb
+C:\Users\1511143\Desktop\Prog_Objet_T2\Yannick_CoursDeRecettes\Yannick_CoursDeRecettes\obj\Debug\Yannick_CoursDeRecettes.csprojAssemblyReference.cache
