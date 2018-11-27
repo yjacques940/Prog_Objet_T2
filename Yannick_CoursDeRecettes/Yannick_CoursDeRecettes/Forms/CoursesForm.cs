@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Yannick_CoursDeRecettes
 {
-    public partial class Form1 : Form
+    public partial class CourseForm : Form
     {
-        public Form1()
+        public CourseForm()
         {
             InitializeComponent();
         }
