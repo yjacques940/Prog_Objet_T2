@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Yannick_CoursDeRecettes.Classes
 {
-    class AdvancedCourse
+    class AdvancedCourse : Course
     {
+        string requirements { get; set; }
+
+        public override string Requirements => requirements;
+
+        public AdvancedCourse():base()
+        {
+
+        }
     }
 }

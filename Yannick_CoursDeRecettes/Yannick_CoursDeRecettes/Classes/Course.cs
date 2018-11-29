@@ -8,27 +8,16 @@ using System.Threading.Tasks;
 
 namespace Yannick_CoursDeRecettes.Classes
 {
-    abstract class Course : INotifyPropertyChanged
+    abstract class Course  
     {
         public string CourseName { get; set; } = "Sauce cours";
         public string RegistrationCost { get; set; } = "14$";
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        public virtual string TechnicalName { get; set; }
+        public virtual string TechnicalDescription { get; set; }
+        public virtual string Requirements { get; set; }
 
         internal void LoadData()
         {
-            UpdateProperties();
-        }
-
-        private void UpdateProperties()
-        {
-            OnPropertyChanged(nameof(CourseName));
-            OnPropertyChanged(nameof(RegistrationCost));
-        }
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

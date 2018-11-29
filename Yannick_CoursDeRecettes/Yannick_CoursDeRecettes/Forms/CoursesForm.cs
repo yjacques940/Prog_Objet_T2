@@ -12,8 +12,10 @@ using Yannick_CoursDeRecettes.Interfaces;
 
 namespace Yannick_CoursDeRecettes
 {
-    public partial class CourseForm : Form,ICourseView
+    public partial class CourseForm : Form, ICourseView
     {
+        public BindingSource BindingSource = new BindingSource();
+
         public CourseForm()
         {
             InitializeComponent();

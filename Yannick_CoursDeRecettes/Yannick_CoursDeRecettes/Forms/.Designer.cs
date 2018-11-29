@@ -34,7 +34,6 @@
             this.courseTypeDescriptionLabel = new System.Windows.Forms.Label();
             this.courseTypeLabel = new System.Windows.Forms.Label();
             this.courseNameLabel = new System.Windows.Forms.Label();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registrationCostDescriptionLabel = new System.Windows.Forms.Label();
             this.registrationCostLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
@@ -60,10 +59,11 @@
             this.courseInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.searchCourseButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
+            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.recipeGroupBox.SuspendLayout();
             this.moreInformationGroupBox.SuspendLayout();
             this.courseInformationGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // courseNumberTextbox
@@ -104,17 +104,13 @@
             // courseNameLabel
             // 
             this.courseNameLabel.AutoSize = true;
-            this.courseNameLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "CourseName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.courseNameLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource1, "CourseName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.courseNameLabel.Location = new System.Drawing.Point(97, 28);
             this.courseNameLabel.Name = "courseNameLabel";
             this.courseNameLabel.Size = new System.Drawing.Size(74, 13);
             this.courseNameLabel.TabIndex = 4;
             this.courseNameLabel.Text = "[CourseName]";
             this.courseNameLabel.Visible = false;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(Yannick_CoursDeRecettes.Classes.Course);
             // 
             // registrationCostDescriptionLabel
             // 
@@ -128,7 +124,7 @@
             // registrationCostLabel
             // 
             this.registrationCostLabel.AutoSize = true;
-            this.registrationCostLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "RegistrationCost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.registrationCostLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource1, "RegistrationCost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.registrationCostLabel.Location = new System.Drawing.Point(97, 80);
             this.registrationCostLabel.Name = "registrationCostLabel";
             this.registrationCostLabel.Size = new System.Drawing.Size(34, 13);
@@ -305,6 +301,7 @@
             // prerequisitesOrTitleLabel
             // 
             this.prerequisitesOrTitleLabel.AutoSize = true;
+            this.prerequisitesOrTitleLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource1, "Requirements", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.prerequisitesOrTitleLabel.Location = new System.Drawing.Point(115, 27);
             this.prerequisitesOrTitleLabel.Name = "prerequisitesOrTitleLabel";
             this.prerequisitesOrTitleLabel.Size = new System.Drawing.Size(103, 13);
@@ -373,6 +370,10 @@
             this.searchCourseButton.UseVisualStyleBackColor = true;
             this.searchCourseButton.Click += new System.EventHandler(this.searchCourseButton_Click);
             // 
+            // courseBindingSource1
+            // 
+            this.courseBindingSource1.DataSource = typeof(Yannick_CoursDeRecettes.Classes.Course);
+            // 
             // CourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,13 +391,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rechercher un cours";
             this.Load += new System.EventHandler(this.CourseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.recipeGroupBox.ResumeLayout(false);
             this.recipeGroupBox.PerformLayout();
             this.moreInformationGroupBox.ResumeLayout(false);
             this.moreInformationGroupBox.PerformLayout();
             this.courseInformationGroupBox.ResumeLayout(false);
             this.courseInformationGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +435,7 @@
         private System.Windows.Forms.GroupBox courseInformationGroupBox;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button searchCourseButton;
-        private System.Windows.Forms.BindingSource courseBindingSource;
+        private System.Windows.Forms.BindingSource courseBindingSource1;
     }
 }
 

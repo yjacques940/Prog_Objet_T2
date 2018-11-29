@@ -16,12 +16,13 @@ namespace Yannick_CoursDeRecettes.Repository
         {
             Connexion.BD = "" ; 
         }
+
         internal Course SearchCourseByCourseNumber(string courseNumber)
         {
             MySqlCommand commandCourse;
             MySqlDataReader readerCourse;
             
-            var course = new TechnicalCourse();
+            Course course = new TechnicalCourse();
             if (connexion != null)
             {
                 commandCourse = connexion.CreateCommand();
@@ -30,41 +31,20 @@ namespace Yannick_CoursDeRecettes.Repository
                 //on place les valeurs de l'enregistrement trouvé à l'intérieur d'un objet métier (notre classe TEditeur)
                 if (readerCourse.Read())
                 {
-                    Editeur.Identifiant = Convert.ToInt32(readerCourse["PubId"]);
-                    Editeur.Nom = readerCourse["Name"].ToString();
-                    Editeur.Cie = readerCourse["CompanyName"].ToString();
-                    Editeur.Adresse = readerCourse["Address"].ToString();
-                    Editeur.Ville = readerCourse["City"].ToString();
-                    Editeur.Pays = readerCourse["State"].ToString();
+                    if (Convert.ToInt32(readerCourse["typeCours"]) == 2)
+                    {
+                         course = new AdvancedCourse();
+                    }
+                    
+                    course.CourseName = readerCourse["titreCours"].ToString();
+                    course.RegistrationCost = readerCourse["prixCours"].ToString();
+                    course.TechnicalDescription = readerCourse["technique"].ToString();
+                    course.TechnicalName = readerCourse["descriptionTechnique"].ToString();
+                    course.Requirements = readerCourse["State"].ToString();
                 }
                 readerCourse.Close();
             }
-            return Editeur;
+            return course;
         }
     }
-}
-
-
-	Employe unEmploye = new Enseignant();
-	// préférable de ne pas retourner de référence null alors
-	// on crée un des objets de la hiérarchie à l’aide du constructeur par défaut
-
-	// Select selon le no reçu
-…
-if (readerEmploye.Read())
-    {
-        // vérification du type d’employé
-        if (Convert.ToInt32(readerEmploye["typeEmploye"]) == 2)
-        {
-            unEmploye = new ConseillerPedagogique();
-            // remplace le new précédent afin d’avoir le bon type d’objet
-        }
-        unEmploye.Nom = //données du reader;
-…
-//utilisation des propriétés virtuelles
-unEmploye.Discipline = //données du reader;
-unEmploye.Poste = //données du reader;
-}
-    //fermeture du reader
-    return unEmploye;
 }
