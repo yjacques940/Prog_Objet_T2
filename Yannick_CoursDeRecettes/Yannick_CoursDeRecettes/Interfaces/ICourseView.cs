@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yannick_CoursDeRecettes.Interfaces
+namespace Yannick_CoursDeRecettes
 {
     public interface ICourseView
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yannick_CoursDeRecettes.Classes
+namespace Yannick_CoursDeRecettes
 {
     class CourseFeature
     {

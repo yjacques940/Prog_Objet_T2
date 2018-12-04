@@ -7,15 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Yannick_CoursDeRecettes.Classes;
-using Yannick_CoursDeRecettes.Interfaces;
 
 namespace Yannick_CoursDeRecettes
 {
     public partial class CourseForm : Form, ICourseView
     {
-        public BindingSource BindingSource = new BindingSource();
-
         public CourseForm()
         {
             InitializeComponent();

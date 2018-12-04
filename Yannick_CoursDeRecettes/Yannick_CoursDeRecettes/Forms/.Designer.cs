@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.courseNumberTextbox = new System.Windows.Forms.TextBox();
             this.courseNumberLabel = new System.Windows.Forms.Label();
             this.courseTypeDescriptionLabel = new System.Windows.Forms.Label();
@@ -59,11 +58,9 @@
             this.courseInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.searchCourseButton = new System.Windows.Forms.Button();
-            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.recipeGroupBox.SuspendLayout();
             this.moreInformationGroupBox.SuspendLayout();
             this.courseInformationGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // courseNumberTextbox
@@ -99,18 +96,15 @@
             this.courseTypeLabel.Size = new System.Drawing.Size(70, 13);
             this.courseTypeLabel.TabIndex = 3;
             this.courseTypeLabel.Text = "[TypeCourse]";
-            this.courseTypeLabel.Visible = false;
             // 
             // courseNameLabel
             // 
             this.courseNameLabel.AutoSize = true;
-            this.courseNameLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource1, "CourseName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.courseNameLabel.Location = new System.Drawing.Point(97, 28);
             this.courseNameLabel.Name = "courseNameLabel";
             this.courseNameLabel.Size = new System.Drawing.Size(74, 13);
             this.courseNameLabel.TabIndex = 4;
             this.courseNameLabel.Text = "[CourseName]";
-            this.courseNameLabel.Visible = false;
             // 
             // registrationCostDescriptionLabel
             // 
@@ -124,13 +118,11 @@
             // registrationCostLabel
             // 
             this.registrationCostLabel.AutoSize = true;
-            this.registrationCostLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource1, "RegistrationCost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.registrationCostLabel.Location = new System.Drawing.Point(97, 80);
             this.registrationCostLabel.Name = "registrationCostLabel";
             this.registrationCostLabel.Size = new System.Drawing.Size(34, 13);
             this.registrationCostLabel.TabIndex = 6;
             this.registrationCostLabel.Text = "[Cost]";
-            this.registrationCostLabel.Visible = false;
             // 
             // descriptionLabel
             // 
@@ -140,7 +132,6 @@
             this.descriptionLabel.Size = new System.Drawing.Size(86, 13);
             this.descriptionLabel.TabIndex = 7;
             this.descriptionLabel.Text = "[CourseDuration]";
-            this.descriptionLabel.Visible = false;
             // 
             // commentsDescriptionLabel
             // 
@@ -159,7 +150,6 @@
             this.difficultyLevelLabel.Size = new System.Drawing.Size(79, 13);
             this.difficultyLevelLabel.TabIndex = 9;
             this.difficultyLevelLabel.Text = "[DifficultyLevel]";
-            this.difficultyLevelLabel.Visible = false;
             // 
             // difficultyLevelDescriptionLabel
             // 
@@ -195,6 +185,7 @@
             this.commentsListBox.Name = "commentsListBox";
             this.commentsListBox.Size = new System.Drawing.Size(216, 69);
             this.commentsListBox.TabIndex = 13;
+            this.commentsListBox.Visible = false;
             // 
             // recipeGroupBox
             // 
@@ -228,7 +219,6 @@
             this.preparationTimeLabel.Size = new System.Drawing.Size(90, 13);
             this.preparationTimeLabel.TabIndex = 16;
             this.preparationTimeLabel.Text = "[PreparationTime]";
-            this.preparationTimeLabel.Visible = false;
             // 
             // cookingTimeLabel
             // 
@@ -238,7 +228,6 @@
             this.cookingTimeLabel.Size = new System.Drawing.Size(75, 13);
             this.cookingTimeLabel.TabIndex = 15;
             this.cookingTimeLabel.Text = "[CookingTime]";
-            this.cookingTimeLabel.Visible = false;
             // 
             // preparationTimeDescriptionLabel
             // 
@@ -257,7 +246,6 @@
             this.recipeNameLAbel.Size = new System.Drawing.Size(41, 13);
             this.recipeNameLAbel.TabIndex = 13;
             this.recipeNameLAbel.Text = "[Name]";
-            this.recipeNameLAbel.Visible = false;
             // 
             // recipeNameDescriptionLabel
             // 
@@ -288,6 +276,7 @@
             this.descriptionListBox.Name = "descriptionListBox";
             this.descriptionListBox.Size = new System.Drawing.Size(216, 56);
             this.descriptionListBox.TabIndex = 16;
+            this.descriptionListBox.Visible = false;
             // 
             // moreInformationDescriptionLabel
             // 
@@ -301,13 +290,11 @@
             // prerequisitesOrTitleLabel
             // 
             this.prerequisitesOrTitleLabel.AutoSize = true;
-            this.prerequisitesOrTitleLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource1, "Requirements", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.prerequisitesOrTitleLabel.Location = new System.Drawing.Point(115, 27);
             this.prerequisitesOrTitleLabel.Name = "prerequisitesOrTitleLabel";
             this.prerequisitesOrTitleLabel.Size = new System.Drawing.Size(103, 13);
             this.prerequisitesOrTitleLabel.TabIndex = 13;
             this.prerequisitesOrTitleLabel.Text = "[prerequisitesOrTitle]";
-            this.prerequisitesOrTitleLabel.Visible = false;
             // 
             // prerequisitiesOrTitleDescriptionLabel
             // 
@@ -370,10 +357,6 @@
             this.searchCourseButton.UseVisualStyleBackColor = true;
             this.searchCourseButton.Click += new System.EventHandler(this.searchCourseButton_Click);
             // 
-            // courseBindingSource1
-            // 
-            this.courseBindingSource1.DataSource = typeof(Yannick_CoursDeRecettes.Classes.Course);
-            // 
             // CourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,7 +380,6 @@
             this.moreInformationGroupBox.PerformLayout();
             this.courseInformationGroupBox.ResumeLayout(false);
             this.courseInformationGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,7 +417,6 @@
         private System.Windows.Forms.GroupBox courseInformationGroupBox;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button searchCourseButton;
-        private System.Windows.Forms.BindingSource courseBindingSource1;
     }
 }
 

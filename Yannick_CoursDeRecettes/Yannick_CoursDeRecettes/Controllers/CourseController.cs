@@ -5,9 +5,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Yannick_CoursDeRecettes.Classes;
-using Yannick_CoursDeRecettes.Interfaces;
-using Yannick_CoursDeRecettes.Repository;
 
 namespace Yannick_CoursDeRecettes
 {

@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Yannick_CoursDeRecettes.Classes;
 using Yannick_CoursDeRecettes;
 //les namespace ne sont pas les mêmes partout
-namespace Yannick_CoursDeRecettes.Repository
+namespace Yannick_CoursDeRecettes
 {
     class CourseRepository
     {
