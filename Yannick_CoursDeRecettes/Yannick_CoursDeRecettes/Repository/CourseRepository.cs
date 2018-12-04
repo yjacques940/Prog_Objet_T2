@@ -13,7 +13,10 @@ namespace Yannick_CoursDeRecettes
         MySqlConnection connexion;
         public CourseRepository()
         {
-            Connexion.BD = "" ; 
+            Connexion.BD = "cuisine";
+            Connexion.User = "root";
+            Connexion.Password = "";
+            connexion = Connexion.getInstance();
         }
 
         internal Course SearchCourseByCourseNumber(string courseNumber)
@@ -25,7 +28,7 @@ namespace Yannick_CoursDeRecettes
             if (connexion != null)
             {
                 commandCourse = connexion.CreateCommand();
-                commandCourse.CommandText = "Select * from publishers where Pubid='" + courseNumber.ToString() +"'";
+                commandCourse.CommandText = "Select * from cours where codeCours='" + courseNumber.ToString() +"'";
                 readerCourse = commandCourse.ExecuteReader();
                 //on place les valeurs de l'enregistrement trouvé à l'intérieur d'un objet métier (notre classe TEditeur)
                 if (readerCourse.Read())
@@ -37,9 +40,12 @@ namespace Yannick_CoursDeRecettes
                     
                     course.CourseName = readerCourse["titreCours"].ToString();
                     course.RegistrationCost = readerCourse["prixCours"].ToString();
-                    course.TechnicalDescription = readerCourse["technique"].ToString();
-                    course.TechnicalName = readerCourse["descriptionTechnique"].ToString();
-                    course.Requirements = readerCourse["State"].ToString();
+                    course.TechnicalDescription = readerCourse["descriptionTechnique"].ToString();
+                    course.TechnicalName = readerCourse["technique"].ToString();
+                    course.Requirements = readerCourse["prerequis"].ToString();
+                    course.feature.Duration = readerCourse["dureeCours"].ToString();
+                    course.feature.DifficultyLevel = readerCourse["niveauDifficulte"].ToString();
+                    course.feature.Comments = readerCourse["commentaires"].ToString();
                 }
                 readerCourse.Close();
             }

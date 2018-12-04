@@ -8,16 +8,23 @@ using System.Threading.Tasks;
 
 namespace Yannick_CoursDeRecettes
 {
-    abstract class Course  
+    abstract class Course 
     {
-        public string CourseName { get; set; } = "Sauce cours";
-        public string RegistrationCost { get; set; } = "14$";
-        public virtual string TechnicalName { get; set; }
-        public virtual string TechnicalDescription { get; set; }
-        public virtual string Requirements { get; set; }
+        public CourseFeature feature;
+        public string CourseName { get; set; } = "";
+        public string RegistrationCost { get; set; } = "";
+        public virtual string TechnicalName { get; set; } = "";
+        public virtual string TechnicalDescription { get; set; } = "";
+        public virtual string Requirements { get; set; } = "";
+
+        public Course()
+        {
+            feature = new CourseFeature();
+        }
 
         internal void LoadData()
         {
+
         }
     }
 }

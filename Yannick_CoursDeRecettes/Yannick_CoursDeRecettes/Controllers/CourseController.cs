@@ -8,33 +8,29 @@ using System.Threading.Tasks;
 
 namespace Yannick_CoursDeRecettes
 {
-    class CourseController : INotifyPropertyChanged
+    class CourseController 
     {
 
         ICourseView view;
         CourseRepository courseRepository;
         Course currentCourse = null;
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        public string CourseName { get; set; } = "";
-        public string RegistrationCost { get; set; } = "";
-        public virtual string TechnicalName { get; set; } = "";
-        public virtual string TechnicalDescription { get; set; } = "";
-        public virtual string Requirements { get; set; } = "";
         public Course CurrentCourse
         {
             get { return currentCourse; }
         }
 
-        public CourseController(ICourseView view)
+        public CourseController(CourseForm view)
         {
             this.view = view;
             courseRepository = new CourseRepository();
         }
-        internal void LoadData()
+
+        internal string GetTypeOfCourse()
         {
-            //InitialiserLeCours();
+            return currentCourse is TechnicalCourse ? "Cours technique" : 
+                   currentCourse is AdvancedCourse ?  "Cours avancé" : "";
         }
 
         public string RecipeName { get; set; }
@@ -49,28 +45,8 @@ namespace Yannick_CoursDeRecettes
             }
             else
             {
-                var courseInfo = courseRepository.SearchCourseByCourseNumber(courseNumber);
-                CourseName = courseInfo.CourseName;
-                RegistrationCost = courseInfo.RegistrationCost;
-                TechnicalName = courseInfo.TechnicalName;
-                TechnicalDescription = courseInfo.TechnicalDescription;
-                Requirements = courseInfo.Requirements;
-                UpdateProperties();
+                currentCourse = courseRepository.SearchCourseByCourseNumber(courseNumber);
             }
-        }
-
-        private void UpdateProperties()
-        {
-            OnPropertyChanged(nameof(CourseName));
-            OnPropertyChanged(nameof(RegistrationCost));
-            OnPropertyChanged(nameof(TechnicalDescription));
-            OnPropertyChanged(nameof(TechnicalName));
-            OnPropertyChanged(nameof(Requirements));
-        }
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

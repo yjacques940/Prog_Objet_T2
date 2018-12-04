@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.courseNumberTextbox = new System.Windows.Forms.TextBox();
             this.courseNumberLabel = new System.Windows.Forms.Label();
             this.courseTypeDescriptionLabel = new System.Windows.Forms.Label();
@@ -35,32 +36,28 @@
             this.courseNameLabel = new System.Windows.Forms.Label();
             this.registrationCostDescriptionLabel = new System.Windows.Forms.Label();
             this.registrationCostLabel = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.durationLabel = new System.Windows.Forms.Label();
             this.commentsDescriptionLabel = new System.Windows.Forms.Label();
             this.difficultyLevelLabel = new System.Windows.Forms.Label();
             this.difficultyLevelDescriptionLabel = new System.Windows.Forms.Label();
             this.durationDescriptionLabel = new System.Windows.Forms.Label();
             this.courseNameDescriptionLabel = new System.Windows.Forms.Label();
             this.commentsListBox = new System.Windows.Forms.ListBox();
-            this.recipeGroupBox = new System.Windows.Forms.GroupBox();
-            this.cookingTimeDescriptionLabel = new System.Windows.Forms.Label();
-            this.preparationTimeLabel = new System.Windows.Forms.Label();
-            this.cookingTimeLabel = new System.Windows.Forms.Label();
-            this.preparationTimeDescriptionLabel = new System.Windows.Forms.Label();
-            this.recipeNameLAbel = new System.Windows.Forms.Label();
-            this.recipeNameDescriptionLabel = new System.Windows.Forms.Label();
             this.moreInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.descriptionListBox = new System.Windows.Forms.ListBox();
             this.moreInformationDescriptionLabel = new System.Windows.Forms.Label();
-            this.prerequisitesOrTitleLabel = new System.Windows.Forms.Label();
-            this.prerequisitiesOrTitleDescriptionLabel = new System.Windows.Forms.Label();
+            this.prerequisitesLabel = new System.Windows.Forms.Label();
+            this.prerequisitiesDescriptionLabel = new System.Windows.Forms.Label();
             this.addEvaluationButton = new System.Windows.Forms.Button();
             this.courseInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.searchCourseButton = new System.Windows.Forms.Button();
-            this.recipeGroupBox.SuspendLayout();
+            this.technicalNameLabel = new System.Windows.Forms.Label();
+            this.technicalNameDescriptionLabel = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.moreInformationGroupBox.SuspendLayout();
             this.courseInformationGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // courseNumberTextbox
@@ -100,6 +97,7 @@
             // courseNameLabel
             // 
             this.courseNameLabel.AutoSize = true;
+            this.courseNameLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "CourseName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.courseNameLabel.Location = new System.Drawing.Point(97, 28);
             this.courseNameLabel.Name = "courseNameLabel";
             this.courseNameLabel.Size = new System.Drawing.Size(74, 13);
@@ -124,19 +122,19 @@
             this.registrationCostLabel.TabIndex = 6;
             this.registrationCostLabel.Text = "[Cost]";
             // 
-            // descriptionLabel
+            // durationLabel
             // 
-            this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Location = new System.Drawing.Point(97, 104);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(86, 13);
-            this.descriptionLabel.TabIndex = 7;
-            this.descriptionLabel.Text = "[CourseDuration]";
+            this.durationLabel.AutoSize = true;
+            this.durationLabel.Location = new System.Drawing.Point(97, 104);
+            this.durationLabel.Name = "durationLabel";
+            this.durationLabel.Size = new System.Drawing.Size(86, 13);
+            this.durationLabel.TabIndex = 7;
+            this.durationLabel.Text = "[CourseDuration]";
             // 
             // commentsDescriptionLabel
             // 
             this.commentsDescriptionLabel.AutoSize = true;
-            this.commentsDescriptionLabel.Location = new System.Drawing.Point(195, 52);
+            this.commentsDescriptionLabel.Location = new System.Drawing.Point(229, 52);
             this.commentsDescriptionLabel.Name = "commentsDescriptionLabel";
             this.commentsDescriptionLabel.Size = new System.Drawing.Size(79, 13);
             this.commentsDescriptionLabel.TabIndex = 8;
@@ -145,7 +143,7 @@
             // difficultyLevelLabel
             // 
             this.difficultyLevelLabel.AutoSize = true;
-            this.difficultyLevelLabel.Location = new System.Drawing.Point(311, 28);
+            this.difficultyLevelLabel.Location = new System.Drawing.Point(339, 28);
             this.difficultyLevelLabel.Name = "difficultyLevelLabel";
             this.difficultyLevelLabel.Size = new System.Drawing.Size(79, 13);
             this.difficultyLevelLabel.TabIndex = 9;
@@ -154,7 +152,7 @@
             // difficultyLevelDescriptionLabel
             // 
             this.difficultyLevelDescriptionLabel.AutoSize = true;
-            this.difficultyLevelDescriptionLabel.Location = new System.Drawing.Point(195, 28);
+            this.difficultyLevelDescriptionLabel.Location = new System.Drawing.Point(229, 28);
             this.difficultyLevelDescriptionLabel.Name = "difficultyLevelDescriptionLabel";
             this.difficultyLevelDescriptionLabel.Size = new System.Drawing.Size(104, 13);
             this.difficultyLevelDescriptionLabel.TabIndex = 10;
@@ -181,90 +179,23 @@
             // commentsListBox
             // 
             this.commentsListBox.FormattingEnabled = true;
-            this.commentsListBox.Location = new System.Drawing.Point(314, 52);
+            this.commentsListBox.HorizontalScrollbar = true;
+            this.commentsListBox.Location = new System.Drawing.Point(321, 52);
             this.commentsListBox.Name = "commentsListBox";
             this.commentsListBox.Size = new System.Drawing.Size(216, 69);
             this.commentsListBox.TabIndex = 13;
-            this.commentsListBox.Visible = false;
-            // 
-            // recipeGroupBox
-            // 
-            this.recipeGroupBox.Controls.Add(this.cookingTimeDescriptionLabel);
-            this.recipeGroupBox.Controls.Add(this.preparationTimeLabel);
-            this.recipeGroupBox.Controls.Add(this.cookingTimeLabel);
-            this.recipeGroupBox.Controls.Add(this.preparationTimeDescriptionLabel);
-            this.recipeGroupBox.Controls.Add(this.recipeNameLAbel);
-            this.recipeGroupBox.Controls.Add(this.recipeNameDescriptionLabel);
-            this.recipeGroupBox.Location = new System.Drawing.Point(12, 179);
-            this.recipeGroupBox.Name = "recipeGroupBox";
-            this.recipeGroupBox.Size = new System.Drawing.Size(215, 126);
-            this.recipeGroupBox.TabIndex = 14;
-            this.recipeGroupBox.TabStop = false;
-            this.recipeGroupBox.Text = "Recette";
-            // 
-            // cookingTimeDescriptionLabel
-            // 
-            this.cookingTimeDescriptionLabel.AutoSize = true;
-            this.cookingTimeDescriptionLabel.Location = new System.Drawing.Point(13, 53);
-            this.cookingTimeDescriptionLabel.Name = "cookingTimeDescriptionLabel";
-            this.cookingTimeDescriptionLabel.Size = new System.Drawing.Size(84, 13);
-            this.cookingTimeDescriptionLabel.TabIndex = 17;
-            this.cookingTimeDescriptionLabel.Text = "Temps cuisson :";
-            // 
-            // preparationTimeLabel
-            // 
-            this.preparationTimeLabel.AutoSize = true;
-            this.preparationTimeLabel.Location = new System.Drawing.Point(112, 86);
-            this.preparationTimeLabel.Name = "preparationTimeLabel";
-            this.preparationTimeLabel.Size = new System.Drawing.Size(90, 13);
-            this.preparationTimeLabel.TabIndex = 16;
-            this.preparationTimeLabel.Text = "[PreparationTime]";
-            // 
-            // cookingTimeLabel
-            // 
-            this.cookingTimeLabel.AutoSize = true;
-            this.cookingTimeLabel.Location = new System.Drawing.Point(112, 53);
-            this.cookingTimeLabel.Name = "cookingTimeLabel";
-            this.cookingTimeLabel.Size = new System.Drawing.Size(75, 13);
-            this.cookingTimeLabel.TabIndex = 15;
-            this.cookingTimeLabel.Text = "[CookingTime]";
-            // 
-            // preparationTimeDescriptionLabel
-            // 
-            this.preparationTimeDescriptionLabel.AutoSize = true;
-            this.preparationTimeDescriptionLabel.Location = new System.Drawing.Point(13, 86);
-            this.preparationTimeDescriptionLabel.Name = "preparationTimeDescriptionLabel";
-            this.preparationTimeDescriptionLabel.Size = new System.Drawing.Size(101, 13);
-            this.preparationTimeDescriptionLabel.TabIndex = 14;
-            this.preparationTimeDescriptionLabel.Text = "Temps préparation :";
-            // 
-            // recipeNameLAbel
-            // 
-            this.recipeNameLAbel.AutoSize = true;
-            this.recipeNameLAbel.Location = new System.Drawing.Point(112, 25);
-            this.recipeNameLAbel.Name = "recipeNameLAbel";
-            this.recipeNameLAbel.Size = new System.Drawing.Size(41, 13);
-            this.recipeNameLAbel.TabIndex = 13;
-            this.recipeNameLAbel.Text = "[Name]";
-            // 
-            // recipeNameDescriptionLabel
-            // 
-            this.recipeNameDescriptionLabel.AutoSize = true;
-            this.recipeNameDescriptionLabel.Location = new System.Drawing.Point(13, 25);
-            this.recipeNameDescriptionLabel.Name = "recipeNameDescriptionLabel";
-            this.recipeNameDescriptionLabel.Size = new System.Drawing.Size(35, 13);
-            this.recipeNameDescriptionLabel.TabIndex = 12;
-            this.recipeNameDescriptionLabel.Text = "Nom :";
             // 
             // moreInformationGroupBox
             // 
+            this.moreInformationGroupBox.Controls.Add(this.technicalNameLabel);
+            this.moreInformationGroupBox.Controls.Add(this.technicalNameDescriptionLabel);
             this.moreInformationGroupBox.Controls.Add(this.descriptionListBox);
             this.moreInformationGroupBox.Controls.Add(this.moreInformationDescriptionLabel);
-            this.moreInformationGroupBox.Controls.Add(this.prerequisitesOrTitleLabel);
-            this.moreInformationGroupBox.Controls.Add(this.prerequisitiesOrTitleDescriptionLabel);
-            this.moreInformationGroupBox.Location = new System.Drawing.Point(249, 179);
+            this.moreInformationGroupBox.Controls.Add(this.prerequisitesLabel);
+            this.moreInformationGroupBox.Controls.Add(this.prerequisitiesDescriptionLabel);
+            this.moreInformationGroupBox.Location = new System.Drawing.Point(15, 179);
             this.moreInformationGroupBox.Name = "moreInformationGroupBox";
-            this.moreInformationGroupBox.Size = new System.Drawing.Size(299, 126);
+            this.moreInformationGroupBox.Size = new System.Drawing.Size(540, 92);
             this.moreInformationGroupBox.TabIndex = 15;
             this.moreInformationGroupBox.TabStop = false;
             this.moreInformationGroupBox.Text = "Infos supplémentaires";
@@ -272,43 +203,42 @@
             // descriptionListBox
             // 
             this.descriptionListBox.FormattingEnabled = true;
-            this.descriptionListBox.Location = new System.Drawing.Point(77, 60);
+            this.descriptionListBox.HorizontalScrollbar = true;
+            this.descriptionListBox.Location = new System.Drawing.Point(318, 40);
             this.descriptionListBox.Name = "descriptionListBox";
-            this.descriptionListBox.Size = new System.Drawing.Size(216, 56);
+            this.descriptionListBox.Size = new System.Drawing.Size(216, 43);
             this.descriptionListBox.TabIndex = 16;
-            this.descriptionListBox.Visible = false;
             // 
             // moreInformationDescriptionLabel
             // 
             this.moreInformationDescriptionLabel.AutoSize = true;
-            this.moreInformationDescriptionLabel.Location = new System.Drawing.Point(6, 60);
+            this.moreInformationDescriptionLabel.Location = new System.Drawing.Point(315, 24);
             this.moreInformationDescriptionLabel.Name = "moreInformationDescriptionLabel";
-            this.moreInformationDescriptionLabel.Size = new System.Drawing.Size(66, 13);
+            this.moreInformationDescriptionLabel.Size = new System.Drawing.Size(113, 13);
             this.moreInformationDescriptionLabel.TabIndex = 15;
-            this.moreInformationDescriptionLabel.Text = "Description :";
+            this.moreInformationDescriptionLabel.Text = "Description technique:";
             // 
-            // prerequisitesOrTitleLabel
+            // prerequisitesLabel
             // 
-            this.prerequisitesOrTitleLabel.AutoSize = true;
-            this.prerequisitesOrTitleLabel.Location = new System.Drawing.Point(115, 27);
-            this.prerequisitesOrTitleLabel.Name = "prerequisitesOrTitleLabel";
-            this.prerequisitesOrTitleLabel.Size = new System.Drawing.Size(103, 13);
-            this.prerequisitesOrTitleLabel.TabIndex = 13;
-            this.prerequisitesOrTitleLabel.Text = "[prerequisitesOrTitle]";
+            this.prerequisitesLabel.AutoSize = true;
+            this.prerequisitesLabel.Location = new System.Drawing.Point(65, 27);
+            this.prerequisitesLabel.Name = "prerequisitesLabel";
+            this.prerequisitesLabel.Size = new System.Drawing.Size(103, 13);
+            this.prerequisitesLabel.TabIndex = 13;
+            this.prerequisitesLabel.Text = "[prerequisitesOrTitle]";
             // 
-            // prerequisitiesOrTitleDescriptionLabel
+            // prerequisitiesDescriptionLabel
             // 
-            this.prerequisitiesOrTitleDescriptionLabel.AutoSize = true;
-            this.prerequisitiesOrTitleDescriptionLabel.Location = new System.Drawing.Point(6, 27);
-            this.prerequisitiesOrTitleDescriptionLabel.Name = "prerequisitiesOrTitleDescriptionLabel";
-            this.prerequisitiesOrTitleDescriptionLabel.Size = new System.Drawing.Size(103, 13);
-            this.prerequisitiesOrTitleDescriptionLabel.TabIndex = 12;
-            this.prerequisitiesOrTitleDescriptionLabel.Text = "[prerequisitesOrTitle]";
-            this.prerequisitiesOrTitleDescriptionLabel.Visible = false;
+            this.prerequisitiesDescriptionLabel.AutoSize = true;
+            this.prerequisitiesDescriptionLabel.Location = new System.Drawing.Point(6, 27);
+            this.prerequisitiesDescriptionLabel.Name = "prerequisitiesDescriptionLabel";
+            this.prerequisitiesDescriptionLabel.Size = new System.Drawing.Size(57, 13);
+            this.prerequisitiesDescriptionLabel.TabIndex = 12;
+            this.prerequisitiesDescriptionLabel.Text = "Prérequis :";
             // 
             // addEvaluationButton
             // 
-            this.addEvaluationButton.Location = new System.Drawing.Point(12, 313);
+            this.addEvaluationButton.Location = new System.Drawing.Point(15, 277);
             this.addEvaluationButton.Name = "addEvaluationButton";
             this.addEvaluationButton.Size = new System.Drawing.Size(128, 51);
             this.addEvaluationButton.TabIndex = 16;
@@ -324,7 +254,7 @@
             this.courseInformationGroupBox.Controls.Add(this.courseNameLabel);
             this.courseInformationGroupBox.Controls.Add(this.durationDescriptionLabel);
             this.courseInformationGroupBox.Controls.Add(this.registrationCostDescriptionLabel);
-            this.courseInformationGroupBox.Controls.Add(this.descriptionLabel);
+            this.courseInformationGroupBox.Controls.Add(this.durationLabel);
             this.courseInformationGroupBox.Controls.Add(this.courseNameDescriptionLabel);
             this.courseInformationGroupBox.Controls.Add(this.registrationCostLabel);
             this.courseInformationGroupBox.Controls.Add(this.commentsDescriptionLabel);
@@ -332,14 +262,14 @@
             this.courseInformationGroupBox.Controls.Add(this.difficultyLevelLabel);
             this.courseInformationGroupBox.Location = new System.Drawing.Point(12, 39);
             this.courseInformationGroupBox.Name = "courseInformationGroupBox";
-            this.courseInformationGroupBox.Size = new System.Drawing.Size(536, 134);
+            this.courseInformationGroupBox.Size = new System.Drawing.Size(543, 134);
             this.courseInformationGroupBox.TabIndex = 17;
             this.courseInformationGroupBox.TabStop = false;
             this.courseInformationGroupBox.Text = "Informations sur le cours";
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(420, 313);
+            this.closeButton.Location = new System.Drawing.Point(427, 277);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(128, 51);
             this.closeButton.TabIndex = 18;
@@ -357,29 +287,49 @@
             this.searchCourseButton.UseVisualStyleBackColor = true;
             this.searchCourseButton.Click += new System.EventHandler(this.searchCourseButton_Click);
             // 
+            // technicalNameLabel
+            // 
+            this.technicalNameLabel.AutoSize = true;
+            this.technicalNameLabel.Location = new System.Drawing.Point(88, 52);
+            this.technicalNameLabel.Name = "technicalNameLabel";
+            this.technicalNameLabel.Size = new System.Drawing.Size(84, 13);
+            this.technicalNameLabel.TabIndex = 18;
+            this.technicalNameLabel.Text = "[technicalName]";
+            // 
+            // technicalNameDescriptionLabel
+            // 
+            this.technicalNameDescriptionLabel.AutoSize = true;
+            this.technicalNameDescriptionLabel.Location = new System.Drawing.Point(6, 52);
+            this.technicalNameDescriptionLabel.Name = "technicalNameDescriptionLabel";
+            this.technicalNameDescriptionLabel.Size = new System.Drawing.Size(85, 13);
+            this.technicalNameDescriptionLabel.TabIndex = 17;
+            this.technicalNameDescriptionLabel.Text = "Nom technique :";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Yannick_CoursDeRecettes.Course);
+            // 
             // CourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 373);
+            this.ClientSize = new System.Drawing.Size(559, 342);
             this.Controls.Add(this.searchCourseButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.courseInformationGroupBox);
             this.Controls.Add(this.addEvaluationButton);
             this.Controls.Add(this.moreInformationGroupBox);
-            this.Controls.Add(this.recipeGroupBox);
             this.Controls.Add(this.courseNumberLabel);
             this.Controls.Add(this.courseNumberTextbox);
             this.Name = "CourseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rechercher un cours";
             this.Load += new System.EventHandler(this.CourseForm_Load);
-            this.recipeGroupBox.ResumeLayout(false);
-            this.recipeGroupBox.PerformLayout();
             this.moreInformationGroupBox.ResumeLayout(false);
             this.moreInformationGroupBox.PerformLayout();
             this.courseInformationGroupBox.ResumeLayout(false);
             this.courseInformationGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,29 +344,25 @@
         private System.Windows.Forms.Label courseNameLabel;
         private System.Windows.Forms.Label registrationCostDescriptionLabel;
         private System.Windows.Forms.Label registrationCostLabel;
-        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Label durationLabel;
         private System.Windows.Forms.Label commentsDescriptionLabel;
         private System.Windows.Forms.Label difficultyLevelLabel;
         private System.Windows.Forms.Label difficultyLevelDescriptionLabel;
         private System.Windows.Forms.Label durationDescriptionLabel;
         private System.Windows.Forms.Label courseNameDescriptionLabel;
         private System.Windows.Forms.ListBox commentsListBox;
-        private System.Windows.Forms.GroupBox recipeGroupBox;
-        private System.Windows.Forms.Label cookingTimeDescriptionLabel;
-        private System.Windows.Forms.Label preparationTimeLabel;
-        private System.Windows.Forms.Label cookingTimeLabel;
-        private System.Windows.Forms.Label preparationTimeDescriptionLabel;
-        private System.Windows.Forms.Label recipeNameLAbel;
-        private System.Windows.Forms.Label recipeNameDescriptionLabel;
         private System.Windows.Forms.GroupBox moreInformationGroupBox;
         private System.Windows.Forms.ListBox descriptionListBox;
         private System.Windows.Forms.Label moreInformationDescriptionLabel;
-        private System.Windows.Forms.Label prerequisitesOrTitleLabel;
-        private System.Windows.Forms.Label prerequisitiesOrTitleDescriptionLabel;
+        private System.Windows.Forms.Label prerequisitesLabel;
+        private System.Windows.Forms.Label prerequisitiesDescriptionLabel;
         private System.Windows.Forms.Button addEvaluationButton;
         private System.Windows.Forms.GroupBox courseInformationGroupBox;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button searchCourseButton;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Label technicalNameLabel;
+        private System.Windows.Forms.Label technicalNameDescriptionLabel;
     }
 }
 

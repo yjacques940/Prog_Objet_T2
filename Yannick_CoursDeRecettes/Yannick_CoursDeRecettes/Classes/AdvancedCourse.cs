@@ -8,9 +8,7 @@ namespace Yannick_CoursDeRecettes
 {
     class AdvancedCourse : Course
     {
-        string requirements { get; set; }
-
-        public override string Requirements => requirements;
+        public override string Requirements { get; set; }
 
         public AdvancedCourse():base()
         {

@@ -8,16 +8,12 @@ namespace Yannick_CoursDeRecettes
 {
     class TechnicalCourse:Course
     {
-         string technicalName { get; set; }
-         string technicalDescription { get; set; }
 
-        public override string TechnicalName => technicalName;
-        public override string TechnicalDescription => technicalDescription;
+        public override string TechnicalName { get; set; }
+        public override string TechnicalDescription { get; set; }
 
         public TechnicalCourse():base()
         {
-            technicalName = "";
-            technicalDescription = "";
         }
     }
 }

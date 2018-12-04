@@ -8,8 +8,19 @@ namespace Yannick_CoursDeRecettes
 {
     class EvaluationController
     {
-        public int Utility { get; set; }
-        public int Difficulty { get; set; }
-        public int Appreciation { get; set; }
+        EvaluationRepository repository;
+        public decimal Utility { get; set; }
+        public decimal Difficulty { get; set; }
+        public decimal Appreciation { get; set; }
+        public string CourseNumber { get; set; }
+
+        public EvaluationController()
+        {
+            repository = new EvaluationRepository();
+        }
+        internal void SaveEvaluationInDatabase()
+        {
+            repository.SaveNewEvaluation(Utility,Difficulty,Appreciation,CourseNumber);
+        }
     }
 }

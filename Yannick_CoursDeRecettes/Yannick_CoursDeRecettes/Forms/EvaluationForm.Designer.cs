@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.utilityLabelDescription = new System.Windows.Forms.Label();
-            this.utilityTextbox = new System.Windows.Forms.MaskedTextBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.appreciationLabelDescription = new System.Windows.Forms.Label();
             this.difficultyLabelDescription = new System.Windows.Forms.Label();
             this.validateButton = new System.Windows.Forms.Button();
-            this.appreciationLabel = new System.Windows.Forms.MaskedTextBox();
-            this.difficultyLabel = new System.Windows.Forms.MaskedTextBox();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.utilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.appreciationNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.difficultyNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilityNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appreciationNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.difficultyNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // utilityLabelDescription
@@ -50,13 +53,6 @@
             this.utilityLabelDescription.TabIndex = 0;
             this.utilityLabelDescription.Text = "Sur une note de 0 à 10, avez-vous trouvé ce cours utile, 0 étant pas du tout et 1" +
     "0 étant très utile?";
-            // 
-            // utilityTextbox
-            // 
-            this.utilityTextbox.Location = new System.Drawing.Point(517, 19);
-            this.utilityTextbox.Name = "utilityTextbox";
-            this.utilityTextbox.Size = new System.Drawing.Size(37, 20);
-            this.utilityTextbox.TabIndex = 1;
             // 
             // appreciationLabelDescription
             // 
@@ -86,20 +82,7 @@
             this.validateButton.TabIndex = 7;
             this.validateButton.Text = "Valider";
             this.validateButton.UseVisualStyleBackColor = true;
-            // 
-            // appreciationLabel
-            // 
-            this.appreciationLabel.Location = new System.Drawing.Point(517, 87);
-            this.appreciationLabel.Name = "appreciationLabel";
-            this.appreciationLabel.Size = new System.Drawing.Size(37, 20);
-            this.appreciationLabel.TabIndex = 8;
-            // 
-            // difficultyLabel
-            // 
-            this.difficultyLabel.Location = new System.Drawing.Point(517, 53);
-            this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(37, 20);
-            this.difficultyLabel.TabIndex = 9;
+            this.validateButton.Click += new System.EventHandler(this.validateButton_Click);
             // 
             // cancelButton
             // 
@@ -111,23 +94,62 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // utilityNumericUpDown
+            // 
+            this.utilityNumericUpDown.Location = new System.Drawing.Point(515, 19);
+            this.utilityNumericUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.utilityNumericUpDown.Name = "utilityNumericUpDown";
+            this.utilityNumericUpDown.Size = new System.Drawing.Size(39, 20);
+            this.utilityNumericUpDown.TabIndex = 11;
+            // 
+            // appreciationNumericUpDown
+            // 
+            this.appreciationNumericUpDown.Location = new System.Drawing.Point(515, 87);
+            this.appreciationNumericUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.appreciationNumericUpDown.Name = "appreciationNumericUpDown";
+            this.appreciationNumericUpDown.Size = new System.Drawing.Size(39, 20);
+            this.appreciationNumericUpDown.TabIndex = 12;
+            // 
+            // difficultyNumericUpDown
+            // 
+            this.difficultyNumericUpDown.Location = new System.Drawing.Point(515, 54);
+            this.difficultyNumericUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.difficultyNumericUpDown.Name = "difficultyNumericUpDown";
+            this.difficultyNumericUpDown.Size = new System.Drawing.Size(39, 20);
+            this.difficultyNumericUpDown.TabIndex = 13;
+            // 
             // EvaluationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 155);
+            this.Controls.Add(this.difficultyNumericUpDown);
+            this.Controls.Add(this.appreciationNumericUpDown);
+            this.Controls.Add(this.utilityNumericUpDown);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.difficultyLabel);
-            this.Controls.Add(this.appreciationLabel);
             this.Controls.Add(this.validateButton);
             this.Controls.Add(this.difficultyLabelDescription);
             this.Controls.Add(this.appreciationLabelDescription);
-            this.Controls.Add(this.utilityTextbox);
             this.Controls.Add(this.utilityLabelDescription);
             this.Name = "EvaluationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Évaluation du cours";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilityNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appreciationNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.difficultyNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,13 +158,13 @@
         #endregion
 
         private System.Windows.Forms.Label utilityLabelDescription;
-        private System.Windows.Forms.MaskedTextBox utilityTextbox;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label appreciationLabelDescription;
         private System.Windows.Forms.Label difficultyLabelDescription;
         private System.Windows.Forms.Button validateButton;
-        private System.Windows.Forms.MaskedTextBox appreciationLabel;
-        private System.Windows.Forms.MaskedTextBox difficultyLabel;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.NumericUpDown utilityNumericUpDown;
+        private System.Windows.Forms.NumericUpDown appreciationNumericUpDown;
+        private System.Windows.Forms.NumericUpDown difficultyNumericUpDown;
     }
 }
